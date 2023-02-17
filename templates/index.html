@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Generator</title>
+  </head>
+  <body>
+    <h1>Image Generator</h1>
+    <form action="/" method="POST">
+      <label for="text">Enter Title:</label>
+      <input type="text" name="title" id="title"><br><br>
+      <label for="text">Enter Text:</label><br>
+      <textarea id="text" name="text" rows="5" cols="50" innertext="hi sir"></textarea>
+      <br><br>
+      <input type="checkbox" name="option1" value="True"> ends in code line<br>
+      <input type="radio" name="choice" value="large_img"> large image
+      <input type="radio" name="choice" value="small_img"> Small image 
+      <button type="submit">Generate Image</button>
+    </form>
+    {% if image_path %}
+      <img src="{{ image_path }}" alt="Generated Image">
+    {% endif %}
+  </body>
+</html>
